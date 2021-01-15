@@ -1,4 +1,4 @@
-FROM archlinux as builder
+FROM docker.io/archlinux as builder
 USER root
 RUN pacman -Syu --noconfirm \
  && pacman -S --noconfirm sudo base-devel \
