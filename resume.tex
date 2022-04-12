@@ -1,10 +1,10 @@
 \documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
-\moderncvstyle{fancy}
+\moderncvstyle{classic}
 \moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 % adjust the page margins
-\usepackage[scale=0.82]{geometry}
+\usepackage[scale=0.8]{geometry}
 
 \name{Andrew}{Rabert}
 \address {Doylestown, PA}
@@ -16,42 +16,41 @@
 \begin{document}
 \makecvtitle
 
-\section{Highlights}
-\cvlistitem{Co-founder of the Jellyfin media streaming project (https://jellyfin.media)}
-\cvlistitem{Self-hosts multiple cloud services for self, friends, and family}
-\cvlistitem{Active open-source contributor and hobby programmer}
-
 \section{Experience}
-\cventry{2017-Present}{Software Engineer}{AWeber}{Chalfont, PA}{}{{}%
-\begin{itemize}
-\item Designed, developed, and supported solutions ranging from core email deliverability to backends for AWeber's mobile apps.
-\item Strong focus on HTTP services and AMQP consumers
-\item Regular contributor to AWeber's in-house and public-facing Python standards and libraries.
-\item Setup CI pipelines, alerts, and application dashboards.
-\item Embraced learning atmosphere by regularly giving presentations on various technical topics.
-\end{itemize}}
+\cventry{2021-Present}{Senior Software Engineer}{AWeber Communications}{Remote / Chalfont, PA}{}{{}}
+\vspace{-1.25\baselineskip}
+\cventry{2017-2020}{Software Engineer}{}{}{}{{}
+    \begin{itemize}
+    \item Designed, developed, and supported solutions ranging from core email deliverability to backends for AWeber's mobile apps.
+    \item Strong focus on Python HTTP services and AMQP consumers
+    \item Regular contributor to AWeber's in-house and public-facing Python standards and libraries.
+    \item Maintained CI pipelines, alerts, and application dashboards.
+    \end{itemize}
+}
 
-\cventry{2015-2016}{Application Support Engineer}{AWeber}{Chalfont, PA}{}{{}%
-\begin{itemize}
-\item Develop and support over a diverse ecosystem of technologies (Python, PHP, JavaScript, Perl, Erlang).
-\item Regularly work across many parts of the stack (backend, frontend, database, operations).
-\item Triage and resolve customer-facing issues.
-\item Design and develop backend and frontend tools to aid both customers and fellow employees.
-\item Engage with third-party AWeber API developers to provide guidance and support.
-\end{itemize}}
+\cventry{2015-2016}{Application Support Engineer}{AWeber Communications}{Chalfont, PA}{}{{}%
+    \begin{itemize}
+    \item Develop and support over a diverse ecosystem of technologies (Python, PHP, JavaScript, Perl, Erlang).
+    \item Regularly work across many parts of the stack (backend, frontend, database, operations).
+    \item Triage and resolve customer-facing issues.
+    \item Design and develop backend and frontend tools to aid both customers and fellow employees.
+    \item Engage with third-party AWeber API developers to provide guidance and support.
+    \end{itemize}
+}
 
 \cventry{2012-2015}{Associate Developer}{Guardian Life Insurance}{Bethlehem, PA}{}{{}%
-\begin{itemize}
-\item Enhance, maintain, and support existing mainframe insurance rating and renewal applications (COBOL, DB2).
-\item Convert various group insurance renewal formula calculations from COBOL to Python.
-\item Led and coded DB2 optimization effort in an C\#/ASP.NET/mainframe system.
-\item Designed and developed automated DB2 stored procedure regression test framework (Python).
-\item Worked closely with the business to provide ad-hoc DB2 SQL reports.
-\item Authored and provided system requirements to offshore development teams.
-\end{itemize}}
+    \begin{itemize}
+    \item Enhance, maintain, and support existing mainframe insurance rating and renewal applications (COBOL, DB2).
+    \item Convert various group insurance renewal formula calculations from COBOL to Python.
+    \item Led and coded DB2 optimization effort in an C\#/ASP.NET/mainframe system.
+    \item Designed and developed automated DB2 stored procedure regression test framework (Python).
+    \item Worked closely with the business to provide ad-hoc DB2 SQL reports.
+    \item Authored and provided system requirements to offshore development teams.
+    \end{itemize}
+}
 
-%\section{Education}
-%\cventry{2014}{A.S. Computer Science}{LCCC}{Schnecksville, PA}{}{}  % arguments 3 to 6 can be left empty
+\section{Education}
+\cventry{2014}{A.S. Computer Science}{LCCC}{Schnecksville, PA}{}{}  % arguments 3 to 6 can be left empty
 
 \nocite{*}
 \bibliographystyle{plain}
