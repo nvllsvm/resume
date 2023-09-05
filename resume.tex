@@ -1,13 +1,32 @@
-\documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[12pt,a4paper,sans]{moderncv}
 
 \moderncvstyle{classic}
-\moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{black} 
 
-% adjust the page margins
-\usepackage[scale=0.75]{geometry}
+% margins
+\usepackage[scale=0.9]{geometry}
+
+\usepackage{datetime}
+\def\dates[#1-#2 #3-#4]{\yearabove{\monthname[#2]}{#1}--\yearabove{\monthname[#4]}{#3}}
+\def\datespresent[#1-#2]{\yearabove{\monthname[#2]}{#1}-- Present}
+\newcommand{\yearabove}[2]{\parbox[t]{10mm}{\centering{#2\par\vspace{-2mm} \tiny{#1}}}}
+
+\setlength{\hintscolumnwidth}{3cm} % change the width of the column with the dates
+
+\setlength{\hintscolumnwidth}{2.6cm}
+
+\renewcommand*{\cventry}[7][.25em]{%
+  \cvitem[#1]{#2}{%
+    \ifthenelse{\equal{#3}{}}{}{\textbf{#3}}%
+    \ifthenelse{\equal{#4}{}}{}{ - \normalfont{#4}}%
+    \ifthenelse{\equal{#5}{}}{}{ \normalfont{#5}}%
+    \ifthenelse{\equal{#6}{}}{}{ #6}%
+    \strut%
+    \ifx&#7&%
+    \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
 
 \name{Andrew}{Rabert}
-\address {Doylestown, PA}
+\address{PA, United States}
 \phone[mobile]{(484)~601~2157}
 \email{ar@nullsum.net}
 \homepage{nullsum.net}
@@ -16,21 +35,40 @@
 \begin{document}
 \makecvtitle
 
-\section{Experience}
-\cventry{2021-Present}{Senior Software Engineer}{AWeber Communications}{Remote}{}{{}}
-\vspace{-1.25\baselineskip}
-\cventry{2017-2020}{Software Engineer}{}{}{Remote / Chalfont, PA}{{}
+\section{experience}
+
+\cventry[2em]{\dates[2022-07 2023-08]}{Gisual}{Senior Software Engineer}{}{}{{}
     \begin{itemize}
-    \item Designed, developed, and supported solutions relating to email deliverability, content templating, and web push notifications.
-    \item Primarily Python microservices, AMQP consumers, PostgreSQL, Kubernetes
-    \item Regular contributor to AWeber's in-house and public-facing Python standards and libraries.
-    \item Maintained CI pipelines, alerts, and application dashboards.
+    \item \textbf{Technologies:} Python, RabbitMQ, PostgreSQL (with PostGIS, TimescaleDB), Redis, Kubernetes, Azure
+    \item Designed, developed, and supported to solve business needs.
+    \item Built a system of applications which gathers and performs experiments using various third-party data sources
+    \item Built an image-based captcha solver
     \end{itemize}
 }
 
-\cventry{2015-2016}{Application Support Engineer}{AWeber Communications}{Chalfont, PA}{}{{}%
+\cventry[2em]{\datespresent[2018-12]}{Jellyfin - Open Source Media System}{Co-Founder}{}{}{{}
     \begin{itemize}
-    \item Develop and support over a diverse ecosystem of technologies (Python, PHP, JavaScript, Perl, Erlang).
+        \item Steered the initial project to use technologies which would promote reproducibility from source code and reduce the time needed for new developers to get started.
+        \item Built various various audio and video media transcoding tools and servers.
+        \item Strong influence over the project's banding (name, logo, colors)
+    \end{itemize}
+}
+
+\cventry[2em]{\dates[2017-01 2022-07]}{AWeber}{Senior Software Engineer / Software Engineer}{}{}{{}
+    \begin{itemize}
+    \item \textbf{Technologies:} Python, RabbitMQ, PostgreSQL, Redis, Kubernetes, GitLab, AWS
+    \item Designed, developed, and supported solutions relating to email deliverability, content templating, and web push notifications.
+    \item Built an event-driven archicture for sending push notifications to Android, iOS, and web clients
+    \item Built AWeber's next-generation email templating engine
+    \item Built the backend for AWeber's public email archive hub
+    \item Regular contributor to AWeber's in-house and public-facing Python standards and libraries.
+    \end{itemize}
+}
+
+\cventry[2em]{\dates[2015-07 2017-01]}{AWeber}{Application Support Engineer}{}{}{{}%
+    \begin{itemize}
+    \item \textbf{Technologies:} Python, PHP, RabbitMQ, PostgreSQL, JavaScript, Perl, Erlang
+    \item Develop and support over a diverse ecosystem of technologies.
     \item Regularly work across many parts of the stack (backend, frontend, database, operations).
     \item Triage and resolve customer-facing issues.
     \item Design and develop backend and frontend tools to aid both customers and fellow employees.
@@ -38,9 +76,10 @@
     \end{itemize}
 }
 
-\cventry{2012-2015}{Associate Developer}{Guardian Life Insurance}{Bethlehem, PA}{}{{}%
+\cventry[2em]{\dates[2012-05 2015-07]}{Associate Developer}{Guardian Life Insurance}{}{}{{}%
     \begin{itemize}
-    \item Enhance, maintain, and support existing mainframe insurance rating and renewal applications (COBOL, DB2).
+    \item \textbf{Technologies:} COBOL, SQL, DB2, C\#, Python
+    \item Enhance, maintain, and support existing mainframe insurance rating and renewal applications.
     \item Convert various group insurance renewal formula calculations from COBOL to Python.
     \item Led and coded DB2 optimization effort in an C\#/ASP.NET/mainframe system.
     \item Designed and developed automated DB2 stored procedure regression test framework (Python).
@@ -49,8 +88,6 @@
     \end{itemize}
 }
 
-\section{Education}
-\cventry{2014}{A.S. Computer Science}{LCCC}{Schnecksville, PA}{}{}  % arguments 3 to 6 can be left empty
 
 \nocite{*}
 \bibliographystyle{plain}
