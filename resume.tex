@@ -35,22 +35,24 @@
 \begin{document}
 \makecvtitle
 
-\section{experience}
+\section{Experience}
 
 \cventry[2em]{\dates[2022-07 2023-08]}{Gisual}{Senior Software Engineer}{}{}{{}
     \begin{itemize}
     \item \textbf{Technologies:} Python, RabbitMQ, PostgreSQL (with PostGIS, TimescaleDB), Redis, Kubernetes, Azure
-    \item Designed, developed, and supported to solve business needs.
-    \item Built a system of applications which gathers and performs experiments using various third-party data sources
-    \item Built an image-based captcha solver
+    \item Designed an image-based captcha solver to enable the product expansion into international locations serving one of our largest customers.
+    \item Built an event-driven experimentation platform to vet the viability of third-party data sources being used to augment the accuracy of the power diagnosis product.
+    \item Led development of a system (web, HTTP, AMPQ) to empower a team of humans to manually meet customer SLAs when the automated system cannot diagnose power.
+    \item Reduced and simplified stack by transitioning from a synchronous/asynchronous ecosystem to strictly asynchronous.
     \end{itemize}
 }
 
 \cventry[2em]{\datespresent[2018-12]}{Jellyfin - Open Source Media System}{Co-Founder}{}{}{{}
     \begin{itemize}
-        \item Steered the initial project to use technologies which would promote reproducibility from source code and reduce the time needed for new developers to get started.
-        \item Built various various audio and video media transcoding tools and servers.
-        \item Strong influence over the project's banding (name, logo, colors)
+        \item \textbf{Technologies:} audio/video transcoding, C\#, Python, Docker
+        \item Led initial development while ensuring documentation, build procedures/scripts, and artifacts are clearly defined for new developers to looking to contribute.
+        \item Strong influence over the project's branding (name, logo, colors) with an emphasis on searchability, uniqueness, and welcoming to both server operators and users.
+        \item Built various related tools/applications which are used by the community - with noteworthy ones being a Subsonic API proxy, tool to pre-transcode audio, and a standalone transcoding service.
     \end{itemize}
 }
 
@@ -58,9 +60,9 @@
     \begin{itemize}
     \item \textbf{Technologies:} Python, RabbitMQ, PostgreSQL, Redis, Kubernetes, GitLab, AWS
     \item Designed, developed, and supported solutions relating to email deliverability, content templating, and web push notifications.
-    \item Built an event-driven archicture for sending push notifications to Android, iOS, and web clients
-    \item Built AWeber's next-generation email templating engine
-    \item Built the backend for AWeber's public email archive hub
+    \item Built an event-driven platform for sending push notifications (web, Android, iOS) to our customers regarding subscriber updates and email analytics.
+    \item Led development of AWeber's next-generation email templating engine which both simplified the internal stack and increased functionality for customers.
+    \item Designed and implemented the backend for the public email archive hub while preserving 
     \item Regular contributor to AWeber's in-house and public-facing Python standards and libraries.
     \end{itemize}
 }
@@ -87,6 +89,20 @@
     \item Authored and provided system requirements to offshore development teams.
     \end{itemize}
 }
+
+\section{Skills}
+\cvlistitem {Python}
+\cvlistitem {POSIX shell}
+\cvlistitem {PostgreSQL / SQLite}
+\cvlistitem {Redis}
+\cvlistitem {HTTP}
+\cvlistitem {AMQP / RabbitMQ / MQTT}
+\cvlistitem {digital audio/images/video}
+\cvlistitem {Linux}
+\cvlistitem {Docker}
+\cvlistitem {Kubernetes}
+\cvlistitem {AWS}
+\cvlistitem {Azure}
 
 
 \nocite{*}
